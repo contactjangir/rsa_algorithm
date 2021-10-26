@@ -1,5 +1,5 @@
 # CRYPTO_ASSIGNMENT #3
-**rsa_algorithm**
+**RSA algorithm program which has an encryption function, decryption function and decryption using CRT(Chinese Remainder Theorem) source code and executable binary(compiled on Ubuntu)**
 -----------------
 
 
