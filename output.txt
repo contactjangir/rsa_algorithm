@@ -1,0 +1,102 @@
+rjangir@rjangir-linux:/local/mnt/workspace/rjangir/WORKSPACE/rsa$ ./rsa
+
+Enter first prime number (p): 137
+Enter another prime number (q): 131
+Enter a numeric message to encrypt (Plain text) : 513
+
+Compute RSA modulus  n = p * q = 137 * 131 = 17947
+Compute  φ(n) = totient = (p – 1) * (q – 1) = 136 * 130 = 17680
+Possible values of (public key, private key) <--> (e, d) are :
+(3, 11787)
+(7, 10103)
+(11, 11251)
+(19, 15819)
+(23, 7687)
+(29, 1829)
+(31, 1711)
+(37, 14813)
+(41, 3881)
+(43, 2467)
+
+The computed parameters for CRT(Chinese Raminder Theorem):  dP=91, dQ=87, qInv=114
+
+----------------------------------------------------------------------------------------
+
+RSA Encryption:
+
+        Plaintext '513'
+        Public key (e, n) : (3, 17947)
+        The encrypted message (ciphertext) is : 8363
+
+
+        Encryption time is 0.050000 ms
+
+----------------------------------------------------------------------------------------
+
+RSA Decryption:
+
+        Ciphertext 8363
+        Private key (d , n) <--> (11787 , 17947)
+        The decrypted message (plaintext) is : 513
+
+
+        Deccryption time is 0.802000 ms
+
+----------------------------------------------------------------------------------------
+
+Decryption usig CRT(Chine Remainder Theorem) :
+
+        Ciphertext 8363
+        Private Key (d, n):(11787, 17947)
+        The decrypted message ( plaintext ) with CRT is : 513
+
+
+        Decryption time with CRT(Chinese Remainder Theorem) is 0.071000 ms
+
+        -------------------------------------------------------------------
+
+         Comparison between RSA Decryption Time and RSA Decryption Time using CRT(Chinese Remainder Theorem)
+
+         RSA Decryption Time using CRT = (RSA Decryption Time/CRT Decryption Time)/100= 8.852868 times fast
+-------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+
+RSA Encryption:
+
+        Plaintext '513'
+        Public key (e, n) : (3, 17947)
+        The encrypted message (ciphertext) is : 8363
+
+
+        Encryption time is 0.066000 ms
+
+----------------------------------------------------------------------------------------
+
+RSA Decryption:
+
+        Ciphertext 8363
+        Private key (d , n) <--> (11787 , 17947)
+        The decrypted message (plaintext) is : 513
+
+
+        Deccryption time is 0.729000 ms
+
+----------------------------------------------------------------------------------------
+
+Decryption usig CRT(Chine Remainder Theorem) :
+
+        Ciphertext 8363
+        Private Key (d, n):(11787, 17947)
+        The decrypted message ( plaintext ) with CRT is : 513
+
+
+        Decryption time with CRT(Chinese Remainder Theorem) is 0.073000 ms
+
+        -------------------------------------------------------------------
+
+         Comparison between RSA Decryption Time and RSA Decryption Time using CRT(Chinese Remainder Theorem)
+
+         RSA Decryption Time using CRT = (RSA Decryption Time/CRT Decryption Time)/100= 10.013717 times fast
+-------------------------------------------------------------
+
